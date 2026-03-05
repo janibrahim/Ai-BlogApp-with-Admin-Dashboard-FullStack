@@ -1,6 +1,7 @@
 import React from 'react'
 import { assets } from '../../assets/assets'
 import { Outlet, useNavigate } from 'react-router-dom'
+import Sidebar from '../../components/admin/Sidebar'
 
 const Layout = () => {
 
@@ -19,8 +20,8 @@ const Layout = () => {
             </div>
             {/* Side MenuBar */}
             <div className='flex h-[cal(100vh-70px)]'>
-                sideBar
-                <Outlet/>
+                <Sidebar />
+                <Outlet />
             </div>
         </div>
     )
