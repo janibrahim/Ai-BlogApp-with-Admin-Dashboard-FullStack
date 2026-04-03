@@ -14,12 +14,24 @@ const Layout = () => {
     return (
         <div>
             {/* Top Menubar */}
-            <div className='flex items-center justify-between py-2 h-[70px] px-4 sm:px-12 border-b border-gray-200'>
-                <img src={assets.logo} alt="" className='w-32 sm:w-40 cursor-pointer' onClick={() => { navigate('/') }} />
-                <button className='text-sm px-8 py-2 bg-primary text-white rounded-full cursor-pointer' onClick={logout}>Logout</button>
+            <div className='sticky top-0 z-50 bg-white flex items-center justify-between py-2 h-[70px] px-4 sm:px-12 border-b border-gray-200'>
+                <img 
+                    src={assets.logo} 
+                    alt="" 
+                    className='w-32 sm:w-40 cursor-pointer' 
+                    onClick={() => navigate('/')} 
+                />
+                
+                <button 
+                    className='text-sm px-8 py-2 bg-primary text-white rounded-full cursor-pointer' 
+                    onClick={logout}
+                >
+                    Logout
+                </button>
             </div>
+
             {/* Side MenuBar */}
-            <div className='flex h-[cal(100vh-70px)]'>
+            <div className='flex h-[calc(100vh-70px)]'>
                 <Sidebar />
                 <Outlet />
             </div>

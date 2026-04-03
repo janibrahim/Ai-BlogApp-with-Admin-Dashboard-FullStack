@@ -7,9 +7,14 @@ const Navbar = () => {
     const navigate = useNavigate();
 
     return (
-        <div className='flex justify-between items-center py-5 mx-8 sm:mx-20 xl:mx-32'>
+        <div className='sticky top-0 z-50 bg-white flex justify-between items-center py-5 mx-8 sm:mx-20 xl:mx-32'>
             <img onClick={()=>navigate('/')} src={assets.logo} alt="logo" className='w-32 sm:w-44 cursor-pointer' />
-            <button onClick={()=>navigate('/admin')}  className='flex items-center gap-2 rounded-full text-sm cursor-pointer bg-primary text-white md:px-8 px-6 py-2 '>Login
+            
+            <button 
+                onClick={()=>navigate('/admin')}  
+                className='flex items-center gap-2 rounded-full text-sm cursor-pointer bg-primary text-white md:px-8 px-6 py-2 '
+            >
+                Login
                 <img src={assets.arrow} className='w-3 mt-1' alt="arrow" />
             </button>
         </div>
